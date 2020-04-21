@@ -88,13 +88,24 @@ finalScore(inning, 9) might return:
   need to invoke inning() the number of innings and produce a sum to get the score
 
 
-  for(let i=0, i<inningNum, i++)
+  for(let i=0, i<inningNum, i++){
+    
+  }
 */ 
 
 function finalScore(inning, inningNum){
-    let homeScore = 
+    let homeScore = inningNum * inning();
+    let awayScore = inningNum * inning();
 
+    let scoreReport = {
+      "Home": homeScore,
+      "Away": awayScore,
+    }
+    return scoreReport;
 }
+console.log(finalScore(inning, 2))
+console.log(finalScore(inning, 2))
+console.log(finalScore(inning, 2))
 
 /* Task 4: 
 
