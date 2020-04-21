@@ -28,10 +28,16 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ *    counter1 is invoking counterMaker and then setting the count to 0.
+ * 
+ *    counter2 is incrementing the count in counterMaker
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ *    counter1 uses closure because it is accessing the parent scope of counterMaker after it has been executed.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *    
 */
 
 // counter1 code
@@ -56,11 +62,14 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
+function inning( ){
+  let min = 0
+  let max = 2 
+  return Math.floor(Math.random() * (max - min + 1));
 
 }
+console.log(inning())
+console.log(inning())
 
 /* Task 3: finalScore()
 
@@ -73,12 +82,17 @@ finalScore(inning, 9) might return:
   "Home": 11,
   "Away": 5,
 }
+//NOTES TO SELF
+  make a function to calculate Home Score
+  make a function to calculate Away Score
+  need to invoke inning() the number of innings and produce a sum to get the score
 
+
+  for(let i=0, i<inningNum, i++)
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
+function finalScore(inning, inningNum){
+    let homeScore = 
 
 }
 
