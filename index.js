@@ -109,14 +109,24 @@ console.log(finalScore(inning, 2))
 */
 
 function finalScore(inning, inningNum){
-  let homeScore = for(let i=0; i<inningNum; i++){
-     return 
+  let homeScore = 0
+  let awayScore = 0
+
+  for(let i=0; i<inningNum; i++){
+    homeScore = homeScore + inning();
+    awayScore = awayScore + inning();
   }
+
+  return {
+    Home: homeScore,
+    Away: awayScore
+  }
+  
 }
-console.log(finalScore(inning, 3));
+console.log(finalScore(inning, 9));
 
 
-function finalScore(inning, inningNum){
+/*function finalScore(inning, inningNum){
   let homeScore = //run loop here
   let awayScore = //run loop here
 
@@ -152,9 +162,26 @@ Final Score: awayTeam - homeTeam */
 
 //NOTES TO SELF
 /* */
-
+ function getInningScore(inning){
+  return {
+    Home: inning(),
+    Away: inning()
+  }
+ }
 function scoreboard(getInningScore, inning, totalInnings) {
-  /* CODE HERE */
-}
+  let homeScore = 0
+  let awayScore = 0
 
+  let scoreByInning = []
+
+  for(let i=0; i<totalInnings; i++){
+    const currentInning = getInningScore(inning)
+    homeScore = homeScore + currentInning.Home
+    awayScore = awayScore + currentInning.Away
+    scoreByInning.push(`inning: ${i + 1} Home:${homeScore} Away:${awayScore}`)
+  }
+
+  return scoreByInning;
+}
+console.log(scoreboard(getInningScore, inning, 9))
 
