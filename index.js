@@ -93,7 +93,7 @@ finalScore(inning, 9) might return:
   }
 */ 
 
-function finalScore(inning, inningNum){
+/*function finalScore(inning, inningNum){
     let homeScore = inningNum * inning();
     let awayScore = inningNum * inning();
 
@@ -106,7 +106,28 @@ function finalScore(inning, inningNum){
 console.log(finalScore(inning, 2))
 console.log(finalScore(inning, 2))
 console.log(finalScore(inning, 2))
+*/
 
+function finalScore(inning, inningNum){
+  let homeScore = for(let i=0; i<inningNum; i++){
+     return 
+  }
+}
+console.log(finalScore(inning, 3));
+
+
+function finalScore(inning, inningNum){
+  let homeScore = //run loop here
+  let awayScore = //run loop here
+
+  let scoreReport ={
+    "Home": homeScore,
+    "Away": awayScore,
+  }
+  return scoreReport;
+}
+
+console.log(finalScore(inning, 7));
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
@@ -129,7 +150,10 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
+//NOTES TO SELF
+/* */
+
+function scoreboard(getInningScore, inning, totalInnings) {
   /* CODE HERE */
 }
 
